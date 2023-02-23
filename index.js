@@ -3,6 +3,7 @@ const cors = require("cors");
 const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
 const products = require("./routers/v1/products.router");
+const user = require("./routers/v1/user.router");
 
 const app = express();
 const port = process.env.PORT || 5000;
