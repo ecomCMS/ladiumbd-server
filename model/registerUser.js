@@ -26,3 +26,6 @@ const userRegisterSchema = new mongoose.Schema({
     maxLength: [11, "Phone number cannot exceed 11 characters"],
   },
 });
+
+const Register = mongoose.model("User", userRegisterSchema);
+module.exports = Register;
