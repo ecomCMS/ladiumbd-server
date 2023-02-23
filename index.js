@@ -19,7 +19,7 @@ dbConnect();
 app.use("/api/v1/products", products);
 
 // users api
-/* app.use("/api/v1/users", usersRouter); */
+app.use("/api/v1/users", user);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
