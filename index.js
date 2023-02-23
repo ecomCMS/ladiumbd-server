@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
 
 const app = express();
@@ -10,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // database connection
-// dbConnect()
+dbConnect();
 
 // routes
 // products api
