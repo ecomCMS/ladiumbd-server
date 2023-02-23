@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
+const products = require("./routers/v1/products.router");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -15,7 +16,7 @@ dbConnect();
 
 // routes
 // products api
-/* app.use("/api/v1/products", productsRouter); */
+app.use("/api/v1/products", products);
 
 // users api
 /* app.use("/api/v1/users", usersRouter); */
