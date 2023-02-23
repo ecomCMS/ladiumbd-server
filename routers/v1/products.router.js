@@ -9,6 +9,5 @@ router
   .get(product.getProductById)
   .patch(product.updateProduct)
   .delete(product.deleteProduct);
-//   .delete(product.deleteProduct);
 
 module.exports = router;
