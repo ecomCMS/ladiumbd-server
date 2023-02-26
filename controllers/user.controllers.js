@@ -35,7 +35,7 @@ exports.createUser = async (req, res) => {
   try {
     const result = await service.createUserService(req.body);
 
-    const token = jwt.sign(email, process.env.JWT);
+    const token = jwt.sign(result.email, process.env.JWT);
 
     res.status(200).json({
       status: "success",
